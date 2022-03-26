@@ -1,8 +1,8 @@
-import React from 'react';
-import Layout from '../components/layout';
-import { graphql } from 'gatsby';
-import styled from 'styled-components';
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import React from "react";
+import Layout from "../components/layout";
+import { graphql } from "gatsby";
+import styled from "styled-components";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 const AboutTemplate = ({ data }) => {
   const { html, frontmatter } = data.markdownRemark;
@@ -45,6 +45,8 @@ const AboutImageWrapper = styled(GatsbyImage)`
   border-radius: 50%;
   height: 300px;
   width: 300px;
+  position: relative;
+  z-index: 0;
 `;
 
 const AboutCopy = styled.div`
